@@ -1,8 +1,8 @@
 {
 	"info": {
-		"_postman_id": "24487935-6457-487c-96e0-23d65baa9fa8",
+		"_postman_id": "e7d7c8ad-02ef-4a15-973a-dc28d64e13ff",
 		"name": "Evolux - back end test",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "33091217"
 	},
 	"item": [
@@ -23,16 +23,7 @@
 							"mode": "raw",
 							"raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"testpass\"\n}"
 						},
-						"url": {
-							"raw": "{{base_url}}/auth/login",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"auth",
-								"login"
-							]
-						}
+						"url": "{{base_url}}/auth/login"
 					},
 					"response": []
 				},
@@ -50,16 +41,7 @@
 							"mode": "raw",
 							"raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"testpass\",\n  \"role\": \"user\"\n}"
 						},
-						"url": {
-							"raw": "{{base_url}}/auth/register",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"auth",
-								"register"
-							]
-						}
+						"url": "{{base_url}}/auth/register"
 					},
 					"response": []
 				}
@@ -79,13 +61,23 @@
 							}
 						],
 						"url": {
-							"raw": "{{base_url}}/api/didnumbers",
+							"raw": "{{base_url}}/api/didnumbers?per_page=&page=",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"api",
 								"didnumbers"
+							],
+							"query": [
+								{
+									"key": "per_page",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": ""
+								}
 							]
 						}
 					},
@@ -138,16 +130,7 @@
 							"mode": "raw",
 							"raw": "{\n  \"value\": \"1234567890\",\n  \"monthly_price\": 10.00,\n  \"setup_price\": 5.00,\n  \"currency\": \"USD\"\n}"
 						},
-						"url": {
-							"raw": "{{base_url}}/api/didnumbers",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"api",
-								"didnumbers"
-							]
-						}
+						"url": "{{base_url}}/api/didnumbers"
 					},
 					"response": []
 				},
